@@ -108,28 +108,7 @@
 
 }
 
-.room-image{
-    overflow: hidden;
-}
 
-.room-image img{
-    width: 100%;
-    transition: transform 0.5s ease;
-}
-
-.room-image img:hover{
-    transform: scale(1.1);
-}
-
-.populer-image .col{
-    margin-top: 10px;
-}
-
-
-
-.populer-image{
-    overflow: hidden;
-}
 
 .populer-image img{
     width: 100%;
