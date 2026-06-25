@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexXoom · Cart</title>
+    <!-- Bootstrap 5 + Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- TOP HEADER exactly as original -->
+    <div class="bg-success text-white py-2">
+      <div class="container-fluid me-5">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-around align-items-center gap-2"
+        >
+          <div
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-3"
+          >
+            <a href="#" class="text-white text-decoration-none"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-white text-decoration-none"
+              ><i class="bi bi-twitter-x"></i
+            ></a>
+            <a href="#" class="text-white text-decoration-none"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="text-white text-decoration-none"
+              ><i class="bi bi-youtube"></i
+            ></a>
+            <span class="d-none d-md-inline">|</span>
+            <a
+              href="mailto:info.zenviamart@gmail.com"
+              class="text-white text-decoration-none"
+            >
+              <i class="bi bi-envelope-fill me-1"></i> NexXoom@gmail.com
+            </a>
+          </div>
+          <div
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-end gap-3"
+          >
+            <a href="tel:01633068139" class="text-white text-decoration-none">
+              <i class="bi bi-telephone-fill me-1"></i> 01633-068139
+            </a>
+            <span class="d-none d-md-inline">|</span>
+            <div class="dropdown">
+              <a
+                href="#"
+                class="text-white text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-fill me-1"></i> My Account
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="bi bi-person me-2"></i>Login</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#"
+                    ><i class="bi bi-bag me-2"></i>Register</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  MAIN NAV (same as original) -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container align-items-center">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="icon and image/logo-2.jpeg"
+            alt="NexXoom"
+            style="width: 200px; height: 30px"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newArrivel.html">New Arrivals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shop.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                style="width: 300px"
+              />
+              <button class="btn btn-primary" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+          <a href="cart.html" class="ms-3 text-dark position-relative">
+            <i class="bi bi-cart fs-4"></i>
+            <span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              id="cartBadge"
+              >3</span
+            >
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!--  CART PAGE – with inc/dec + delete -->
+    <div class="container my-5">
+      <div class="row g-4">
+        <!-- main cart items -->
+        <div class="col-lg-8">
+          <h3 class="fw-bold mb-4">
+            <i class="bi bi-cart-check me-2"></i>Shopping Cart
+          </h3>
+          <div id="cartItemsContainer">
+            <!-- item 1 -->
+            <div
+              class="card shadow-sm border-0 mb-3 cart-item"
+              data-price="100"
+              data-id="1"
+            >
+              <div class="card-body d-flex flex-wrap align-items-center gap-3">
+                <img
+                  src="icon and image/product-5.webp"
+                  alt="Alarm Clock"
+                  class="cart-img"
+                />
+                <div class="flex-grow-1">
+                  <h6 class="fw-bold mb-0">Alarm Clock · Modern</h6>
+                  <div class="text-muted small">SKU: #AC-100</div>
+                  <div class="d-flex align-items-center gap-3 mt-1">
+                    <span class="text-success fw-semibold">$100.00</span>
+                    <span class="badge bg-warning text-dark">in stock</span>
+                  </div>
+                </div>
+                <!-- inc/dec + middle span -->
+                <div class="d-flex align-items-center gap-2">
+                  <div class="qty-group">
+                    <button class="qty-dec" type="button">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty-inc" type="button">+</button>
+                  </div>
+                  <button class="btn btn-outline-danger btn-sm delete-item">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+                <div
+                  class="fw-bold text-end item-total"
+                  style="min-width: 80px"
+                >
+                  $100.00
+                </div>
+              </div>
+            </div>
+
+            <!-- item 2 -->
+            <div
+              class="card shadow-sm border-0 mb-3 cart-item"
+              data-price="450"
+              data-id="2"
+            >
+              <div class="card-body d-flex flex-wrap align-items-center gap-3">
+                <img
+                  src="icon and image/product-2.webp"
+                  alt="Sofa"
+                  class="cart-img"
+                />
+                <div class="flex-grow-1">
+                  <h6 class="fw-bold mb-0">Modern Sofa · Grey</h6>
+                  <div class="text-muted small">SKU: #SF-202</div>
+                  <div class="d-flex align-items-center gap-3 mt-1">
+                    <span class="text-success fw-semibold">$450.00</span>
+                    <span class="badge bg-warning text-dark">in stock</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="qty-group">
+                    <button class="qty-dec" type="button">−</button>
+                    <span class="qty-val">2</span>
+                    <button class="qty-inc" type="button">+</button>
+                  </div>
+                  <button class="btn btn-outline-danger btn-sm delete-item">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+                <div
+                  class="fw-bold text-end item-total"
+                  style="min-width: 80px"
+                >
+                  $900.00
+                </div>
+              </div>
+            </div>
+
+            <!-- item 3 -->
+            <div
+              class="card shadow-sm border-0 mb-3 cart-item"
+              data-price="65"
+              data-id="3"
+            >
+              <div class="card-body d-flex flex-wrap align-items-center gap-3">
+                <img
+                  src="icon and image/product-8.webp"
+                  alt="Lamp"
+                  class="cart-img"
+                />
+                <div class="flex-grow-1">
+                  <h6 class="fw-bold mb-0">Table Lamp · Brass</h6>
+                  <div class="text-muted small">SKU: #LP-305</div>
+                  <div class="d-flex align-items-center gap-3 mt-1">
+                    <span class="text-success fw-semibold">$65.00</span>
+                    <span class="badge bg-warning text-dark">in stock</span>
+                  </div>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <div class="qty-group">
+                    <button class="qty-dec" type="button">−</button>
+                    <span class="qty-val">1</span>
+                    <button class="qty-inc" type="button">+</button>
+                  </div>
+                  <button class="btn btn-outline-danger btn-sm delete-item">
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </div>
+                <div
+                  class="fw-bold text-end item-total"
+                  style="min-width: 80px"
+                >
+                  $65.00
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- continue shopping + delete all (extra) -->
+          <div class="mt-3 d-flex flex-wrap align-items-center gap-3">
+            <a href="index.html" class="continue-shop"
+              ><i class="bi bi-arrow-left me-1"></i> Continue Shopping</a
+            >
+            <button class="btn btn-outline-secondary btn-sm" id="clearCartBtn">
+              <i class="bi bi-trash3 me-1"></i>Clear Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- cart summary (right) -->
+        <div class="col-lg-4">
+          <div class="summary-box shadow-sm">
+            <h5 class="fw-bold mb-3">Order Summary</h5>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Subtotal (<span id="itemCount">3</span> items)</span>
+              <span class="fw-semibold" id="subtotalDisplay">$1,065.00</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Shipping</span>
+              <span class="text-success">Free</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3">
+              <span>Tax (estimated)</span>
+              <span id="taxDisplay">$85.20</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between mb-3">
+              <span class="fw-bold">Total</span>
+              <span class="fw-bold fs-5" id="totalDisplay">$1,150.20</span>
+            </div>
+
+            <button class="btn btn-success w-100 py-2 fw-bold" type="submit">
+              <i class="bi bi-lock me-2"></i> Proceed to Checkout
+            </button>
+            <div class="text-center mt-3">
+              <small class="text-muted"
+                ><i class="bi bi-shield-check me-1"></i> Secure checkout</small
+              >
+            </div>
+          </div>
+          <div class="mt-3 p-3 bg-light rounded-3">
+            <p class="mb-0 small">
+              <i class="bi bi-truck me-1"></i> Free shipping on orders over $50
+            </p>
+            <p class="mb-0 small">
+              <i class="bi bi-arrow-repeat me-1"></i> 30-day return policy
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- fotter start -->
+    <footer class="bg-white shadow mt-5">
+      <hr />
+      <div class="container-fluid py-4">
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4">
+          <div class="col mb-4">
+            <h4 class="fw-bold text-uppercase mb-3">About Us</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Voluptatem ipsum natus nam? Perspiciatis, assumenda. Quis sit
+              magni nobis animi sunt enim, dolore tempora consectetur! Possimus
+              hic inventore at minus sapiente.
+            </p>
+          </div>
+          <div class="col mb-4">
+            <h3 class="fw-bold text-uppercase mb-3">Product</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-decoration-none text-muted mb-2" href=""
+                  >Ferniture</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-muted mb-2" href="">Fofa</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-muted mb-2" href="">Bed</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-muted mb-2" href=""
+                  >others</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col mb-4">
+            <h3 class="fw-bold text-uppercase mb-3">Pages</h3>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-decoration-none text-muted mb-2" href="">Home</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-muted mb-2" href=""
+                  >New Arrivel</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-muted mb-2" href="">Shop</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-muted mb-2" href=""
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col mb-4">
+            <h3 class="fw-bold text-uppercase mb-3">Contact Us</h3>
+            <ul class="list-unstyled text-muted">
+              <li class="mb-2">
+                <i class="bi bi-house me-2"></i>Dhaka Bangladesh
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-envelope me-2"></i>nexxoom99@gmia.com
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-telephone me-2"></i>+8801712345678
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-printer me-2"></i>+8801712345678
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p class="mb-1">
+          &copy; 2026 Your Company. All rights reserved by
+          <a class="text-decoration-none" href="">Abujor Ariyan</a>
+        </p>
+      </div>
+
+      <div class="d-flex justify-content-center gap-4 py-4">
+        <a class="text-muted" href=""><i class="bi bi-facebook"></i></a>
+        <a class="text-muted" href="" class="ms-3"
+          ><i class="bi bi-twitter"></i
+        ></a>
+        <a class="text-muted" href="" class="ms-3"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <a class="text-muted" href="" class="ms-3"
+          ><i class="bi bi-github"></i
+        ></a>
+        <a class="text-muted" href="" class="ms-3"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+        <a class="text-muted" href="" class="ms-3"
+          ><i class="bi bi-youtube"></i
+        ></a>
+      </div>
+    </footer>
+    <!-- fotter end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

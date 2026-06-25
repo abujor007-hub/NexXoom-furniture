@@ -1,0 +1,21 @@
+mainpage:
+
+home Page
+About page
+shop page
+contact page
+cart page 
+cheackout page
+
+after order welcome page
+user dashboard 
+
+dashboard page
+dashboard-home page:
+category page
+products page
+order page
+message page 
+
+tecenology :
+html,css,js,boostrap, php/Laravel, MySQL, ajax jquary 
