@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexXoom · Checkout</title>
+    <!-- Bootstrap 5 + Icons ONLY -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <!-- ===== TOP HEADER ===== -->
+    <div class="bg-success text-white py-2">
+      <div class="container-fluid me-5">
+        <div class="d-flex flex-column flex-md-row justify-content-around align-items-center gap-2">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-start gap-3">
+            <a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white text-decoration-none"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="text-white text-decoration-none"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white text-decoration-none"><i class="bi bi-youtube"></i></a>
+            <span class="d-none d-md-inline">|</span>
+            <a href="mailto:nexxoom@gmail.com" class="text-white text-decoration-none">
+              <i class="bi bi-envelope-fill me-1"></i> NexXoom@gmail.com
+            </a>
+          </div>
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-end gap-3">
+            <a href="tel:01633068139" class="text-white text-decoration-none">
+              <i class="bi bi-telephone-fill me-1"></i> 01633-068139
+            </a>
+            <span class="d-none d-md-inline">|</span>
+            <div class="dropdown">
+              <a href="#" class="text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-fill me-1"></i> My Account
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#"><i class="bi bi-person me-2"></i>Login</a></li>
+                <li><a class="dropdown-item" href="#"><i class="bi bi-bag me-2"></i>Register</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MAIN NAV ===== -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom">
+      <div class="container align-items-center">
+        <a class="navbar-brand" href="index.html">
+          <img src="icon and image/logo-2.jpeg" alt="NexXoom" style="width: 200px; height: 30px" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="newArrivel.html">New Arrivals</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <form class="d-flex">
+            <div class="input-group">
+              <input class="form-control" type="search" placeholder="Search" aria-label="Search" style="width: 300px" />
+              <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i></button>
+            </div>
+          </form>
+          <a href="cart.html" class="ms-3 text-dark position-relative">
+            <i class="bi bi-cart fs-4"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== CHECKOUT PAGE ===== -->
+    <div class="container my-5">
+      <div class="row g-4">
+
+        <!-- LEFT: Billing Details -->
+        <div class="col-lg-8">
+          <h3 class="fw-bold mb-4"><i class="bi bi-credit-card me-2"></i>Billing Details</h3>
+
+          <form>
+            <div class="row g-3">
+              <!-- First Name -->
+              <div class="col-md-6">
+                <label for="firstName" class="form-label fw-semibold">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="John" required>
+              </div>
+              
+              <!-- Last Name -->
+              <div class="col-md-6">
+                <label for="lastName" class="form-label fw-semibold">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
+              </div>
+
+              <!-- Email Address -->
+              <div class="col-12">
+                <label for="email" class="form-label fw-semibold">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+              </div>
+
+              <!-- Phone -->
+              <div class="col-12">
+                <label for="phone" class="form-label fw-semibold">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" placeholder="+880 1XXX-XXXXXX" required>
+              </div>
+
+              <!-- Message / Order Notes -->
+              <div class="col-12">
+                <label for="orderNotes" class="form-label fw-semibold">Message (optional)</label>
+                <textarea class="form-control" id="orderNotes" rows="4" placeholder="Any special instructions or message…"></textarea>
+              </div>
+
+              <!-- Payment Method -->
+              <div class="col-12 mt-3">
+                <h5 class="fw-bold"><i class="bi bi-wallet2 me-2"></i>Payment Method</h5>
+                <div class="border p-3 rounded-3 bg-light">
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="cod" checked>
+                    <label class="form-check-label fw-semibold" for="cod">
+                      <i class="bi bi-cash-stack me-1"></i> Cash on Delivery
+                    </label>
+                  </div>
+                  <div class="form-check mb-2">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="card">
+                    <label class="form-check-label fw-semibold" for="card">
+                      <i class="bi bi-credit-card me-1"></i> Credit / Debit Card
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="paymentMethod" id="bkash">
+                    <label class="form-check-label fw-semibold" for="bkash">
+                      <i class="bi bi-phone me-1"></i> bKash / Mobile Banking
+                    </label>
+                  </div>
+                  <small class="text-muted d-block mt-2"><i class="bi bi-lock me-1"></i> Your payment is secure.</small>
+                </div>
+              </div>
+
+              <!-- Place Order & Return Buttons - inline flex, not full width -->
+              <div class="col-12 mt-4">
+                <div class="d-flex flex-wrap gap-3">
+                  <button type="submit" class="btn btn-success px-5 py-2 fw-bold">
+                    <i class="bi bi-check-circle me-2"></i> Place Order
+                  </button>
+                  <a href="cart.html" class="btn btn-outline-secondary px-4 py-2">
+                    <i class="bi bi-arrow-left me-2"></i> Return to Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- RIGHT: Order Summary with inc/dec/delete -->
+        <div class="col-lg-4">
+          <div class="border p-4 rounded-3 bg-white shadow-sm">
+            <h5 class="fw-bold mb-3"><i class="bi bi-bag-check me-2"></i>Your Order</h5>
+
+            <!-- Order Item 1 -->
+            <div class="d-flex align-items-start gap-3 border-bottom pb-3 mb-3">
+              <img src="icon and image/product-5.webp" alt="Alarm Clock" class="rounded-3" style="width: 54px; height: 54px; object-fit: cover; background: #fff; border: 1px solid #eee;">
+              <div class="flex-grow-1">
+                <div class="fw-semibold">Alarm Clock · Modern</div>
+                <div class="d-flex justify-content-between align-items-center mt-1">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="btn-group btn-group-sm" role="group">
+                      <button type="button" class="btn btn-outline-secondary qty-dec">−</button>
+                      <span class="btn btn-outline-secondary disabled qty-val" style="min-width: 36px;">1</span>
+                      <button type="button" class="btn btn-outline-secondary qty-inc">+</button>
+                    </div>
+                    <button type="button" class="btn btn-outline-danger btn-sm delete-item">
+                      <i class="bi bi-x-lg"></i>
+                    </button>
+                  </div>
+                  <span class="fw-semibold item-total">$100.00</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Item 2 -->
+            <div class="d-flex align-items-start gap-3 border-bottom pb-3 mb-3">
+              <img src="icon and image/product-2.webp" alt="Sofa" class="rounded-3" style="width: 54px; height: 54px; object-fit: cover; background: #fff; border: 1px solid #eee;">
+              <div class="flex-grow-1">
+                <div class="fw-semibold">Modern Sofa · Grey</div>
+                <div class="d-flex justify-content-between align-items-center mt-1">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="btn-group btn-group-sm" role="group">
+                      <button type="button" class="btn btn-outline-secondary qty-dec">−</button>
+                      <span class="btn btn-outline-secondary disabled qty-val" style="min-width: 36px;">2</span>
+                      <button type="button" class="btn btn-outline-secondary qty-inc">+</button>
+                    </div>
+                    <button type="button" class="btn btn-outline-danger btn-sm delete-item">
+                      <i class="bi bi-x-lg"></i>
+                    </button>
+                  </div>
+                  <span class="fw-semibold item-total">$900.00</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Order Item 3 -->
+            <div class="d-flex align-items-start gap-3">
+              <img src="icon and image/product-8.webp" alt="Lamp" class="rounded-3" style="width: 54px; height: 54px; object-fit: cover; background: #fff; border: 1px solid #eee;">
+              <div class="flex-grow-1">
+                <div class="fw-semibold">Table Lamp · Brass</div>
+                <div class="d-flex justify-content-between align-items-center mt-1">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="btn-group btn-group-sm" role="group">
+                      <button type="button" class="btn btn-outline-secondary qty-dec">−</button>
+                      <span class="btn btn-outline-secondary disabled qty-val" style="min-width: 36px;">1</span>
+                      <button type="button" class="btn btn-outline-secondary qty-inc">+</button>
+                    </div>
+                    <button type="button" class="btn btn-outline-danger btn-sm delete-item">
+                      <i class="bi bi-x-lg"></i>
+                    </button>
+                  </div>
+                  <span class="fw-semibold item-total">$65.00</span>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-3" />
+
+            <!-- Totals -->
+            <div class="d-flex justify-content-between mb-1">
+              <span>Subtotal (<span id="itemCount">3</span> items)</span>
+              <span class="fw-semibold" id="subtotalDisplay">$1,065.00</span>
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+              <span>Shipping</span>
+              <span class="text-success">Free</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2">
+              <span>Tax (estimated)</span>
+              <span id="taxDisplay">$85.20</span>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between mb-3">
+              <span class="fw-bold fs-6">Total</span>
+              <span class="fw-bold fs-5 text-success" id="totalDisplay">$1,150.20</span>
+            </div>
+
+           
+
+            <!-- Secure checkout badge -->
+            <div class="text-center mt-2">
+              <span class="badge bg-light text-dark border py-2 px-3 w-100">
+                <i class="bi bi-shield-check me-1 text-success"></i> Secure checkout · SSL encrypted
+              </span>
+            </div>
+          </div>
+
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-white border-top mt-5">
+      <div class="container py-5">
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
+          <div class="col">
+            <h5 class="fw-bold text-uppercase mb-3">About Us</h5>
+            <p class="text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem ipsum natus nam? Perspiciatis, assumenda.</p>
+          </div>
+          <div class="col">
+            <h5 class="fw-bold text-uppercase mb-3">Product</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-decoration-none text-dark">Furniture</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Sofa</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Bed</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Others</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5 class="fw-bold text-uppercase mb-3">Pages</h5>
+            <ul class="list-unstyled">
+              <li><a href="#" class="text-decoration-none text-dark">Home</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">New Arrival</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Shop</a></li>
+              <li><a href="#" class="text-decoration-none text-dark">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col">
+            <h5 class="fw-bold text-uppercase mb-3">Contact Us</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="bi bi-geo-alt me-2"></i>Dhaka, Bangladesh</li>
+              <li class="mb-2"><i class="bi bi-envelope me-2"></i>nexxoom99@gmail.com</li>
+              <li class="mb-2"><i class="bi bi-telephone me-2"></i>+880 1712 345678</li>
+              <li class="mb-2"><i class="bi bi-printer me-2"></i>+880 1712 345678</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="m-0">
+      <div class="container py-4">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="mb-0 text-dark">© 2026 Your Company. All rights reserved by <a href="#" class="text-decoration-none fw-semibold">Abujor Ariyan</a></p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="#" class="text-dark fs-5 me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-dark fs-5 me-3"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-dark fs-5 me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-dark fs-5 me-3"><i class="bi bi-github"></i></a>
+            <a href="#" class="text-dark fs-5 me-3"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-dark fs-5"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  </body>
+</html>
